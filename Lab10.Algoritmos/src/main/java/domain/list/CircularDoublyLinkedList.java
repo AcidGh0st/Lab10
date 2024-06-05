@@ -1,5 +1,7 @@
 package domain.list;
 
+import static java.lang.StringTemplate.STR;
+
 public class CircularDoublyLinkedList implements List{
     private Node first; //apuntador al inicio de la lista
     private Node last; //apuntador al final de la lista

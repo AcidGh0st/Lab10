@@ -41,17 +41,21 @@ public class HelloController {
     }
 
     @FXML
-    public void bstAVLOperations(ActionEvent actionEvent) {
-        loadPage("bstAVLOperations.fxml");
+    public void adjMatrixGraphOnAction(ActionEvent actionEvent)  {
+
     }
 
     @FXML
-    public void bstAVLTourOnAction(ActionEvent actionEvent) {
-        loadPage("bstAVLTour.fxml");
+    public void matrixOperationsOnAction(ActionEvent actionEvent) {
     }
 
     @FXML
-    public void graphicBSTAVLOnAction(ActionEvent actionEvent) {
-        loadPage("graphicBSTAVL.fxml");
+    public void listOperationsOnAction(ActionEvent actionEvent) {
+        loadPage("adjacencyListGraph.fxml");
+    }
+
+    @FXML
+    public void adjListGraphOnAction(ActionEvent actionEvent)  {
+        loadPage("adjacencyListGraph.fxml");
     }
 }
