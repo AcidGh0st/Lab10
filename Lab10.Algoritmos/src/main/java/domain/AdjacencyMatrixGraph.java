@@ -57,9 +57,9 @@ public class AdjacencyMatrixGraph implements Graph {
 
     @Override
     public boolean containsVertex(Object element) throws GraphException, ListException {
-       if(isEmpty()){
-           throw new GraphException("Adjacency Matrix Graph is empty");
-       }
+        if(isEmpty()){
+            throw new GraphException("Adjacency Matrix Graph is empty");
+        }
         for (int i = 0; i < counter; i++) {
             if(util.Utility.compare(vertexList[i].data, element)==0)
                 return true;
@@ -246,4 +246,16 @@ public class AdjacencyMatrixGraph implements Graph {
         }
         return result;
     }
+
+    public Vertex getVertex(int index) {
+        if (index >= 0 && index < counter) {
+            return vertexList[index];
+        }
+        return null;
+    }
+
+    public Object[][] getAdjacencyMatrix() {
+        return adjacencyMatrix;
+    }
+
 }

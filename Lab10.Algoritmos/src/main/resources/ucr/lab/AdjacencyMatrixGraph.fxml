@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="bp" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdjacencyMatrixGraphController">
+    <center>
+        <AnchorPane prefHeight="465.0" prefWidth="706.0">
+            <children>
+                <Pane prefHeight="69.0" prefWidth="710.0" style="-fx-background-color: F9CEFF;">
+                    <children>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="8.0" prefHeight="54.0" prefWidth="685.0" text="Adjacency Matrix Graph">
+                            <font>
+                                <Font name="Forte" size="51.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane layoutY="69.0" prefHeight="397.0" prefWidth="355.0">
+                    <children>
+                        <TextArea layoutY="118.0" prefHeight="279.0" prefWidth="355.0" />
+                        <Button fx:id="btn_Randomize" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#RandomizeOnAction" prefHeight="35.0" prefWidth="136.0" text="Randomize">
+                            <font>
+                                <Font name="Elephant" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_ContainsVertex" layoutX="184.0" layoutY="9.0" mnemonicParsing="false" onAction="#ContainsVertexOnAction" prefHeight="35.0" prefWidth="136.0" text="Contains Vertex">
+                            <font>
+                                <Font name="Elephant" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_ContainsEdge" layoutX="14.0" layoutY="43.0" mnemonicParsing="false" onAction="#ContainsEdgeOnAction" prefHeight="35.0" prefWidth="136.0" text="Contains Edge">
+                            <font>
+                                <Font name="Elephant" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_DFS" layoutX="14.0" layoutY="78.0" mnemonicParsing="false" onAction="#DFSOnAction" prefHeight="35.0" prefWidth="136.0" text="DFS Tour">
+                            <font>
+                                <Font name="Elephant" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_ToString" layoutX="184.0" layoutY="43.0" mnemonicParsing="false" onAction="#ToStringOnAction" prefHeight="35.0" prefWidth="136.0" text="To String ">
+                            <font>
+                                <Font name="Elephant" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn_BFS" layoutX="184.0" layoutY="78.0" mnemonicParsing="false" onAction="#BFSOnAction" prefHeight="35.0" prefWidth="136.0" text="BFS Tour">
+                            <font>
+                                <Font name="Elephant" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </Pane>
+                <Pane fx:id="pane_Grafo" layoutX="355.0" layoutY="69.0" prefHeight="397.0" prefWidth="355.0" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
