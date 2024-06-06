@@ -216,12 +216,26 @@ public class SinglyLinkedList implements List{
         return null; //si llega aqui es xq no encontro el index
     }
 
+    public Node getNode(Object element) throws ListException {
+        if(isEmpty()){
+            throw new ListException("Singly Linked List is Empty");
+        }
+        Node aux = first;
+        while(aux!=null){
+            if(util.Utility.compare(aux.data, element)==0) {  //ya encontro el elemento
+                return aux;
+            }
+            aux = aux.next; //muevo aux al sgte nodo
+        }
+        return null; //si llega aqui es xq no encontro el index
+    }
+
     @Override
     public String toString() {
         String result = "Singly Linked List Content\n\n";
         Node aux = first;
         while(aux!=null){
-            result+= STR."\{aux.data}, ";
+            result+= "\n" + aux.data;
             aux = aux.next;
         }
         return result;

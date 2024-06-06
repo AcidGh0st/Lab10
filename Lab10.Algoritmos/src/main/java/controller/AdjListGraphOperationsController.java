@@ -1,5 +1,9 @@
 package controller;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.Pane;
+
 public class AdjListGraphOperationsController
 {
     @javafx.fxml.FXML
