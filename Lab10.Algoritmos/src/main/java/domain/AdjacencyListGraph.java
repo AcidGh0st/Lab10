@@ -224,12 +224,12 @@ public class AdjacencyListGraph implements Graph {
     public String toString() {
         String result = "Adjacency List Graph Content";
         for (int i = 0; i < counter; i++) {
-            result+="\nThe vertex in the position: "+i+" is: "
-                    +vertexList[i].data;
+            result+="\nThe vertex in the position: "+i+" is: "+vertexList[i].data;
             if(!vertexList[i].edgesList.isEmpty()){
                 result+="\n...EDGES AND WEIGHTS: "+ vertexList[i].edgesList.toString();
             }
         }
         return result;
     }
+
 }

@@ -15,11 +15,11 @@ public class AdjListGraphOperationsController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void toStringOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void dfsOnAction(ActionEvent actionEvent) {
     }
 
@@ -27,15 +27,35 @@ public class AdjListGraphOperationsController
     public void randomizeOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void bfsOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void containsVertexOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void containsEdgeOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void revemoEWOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void clearOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void addVertexOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void addEWOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void removeVertexOnAction(ActionEvent actionEvent) {
     }
 }
