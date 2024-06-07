@@ -220,6 +220,79 @@ public class AdjacencyListGraph implements Graph {
         return -1;
     }
 
+    //Método para obtener los vértices pares
+    public Vertex[] getEvenVertices() throws GraphException {
+        if (isEmpty()) {
+            throw new GraphException("Adjacency List Graph is empty");
+        }
+
+        int evenCount = 0;
+        for (int i = 0; i < counter; i++) {
+            int vertexValue = Integer.parseInt(vertexList[i].data.toString());
+            if (vertexValue % 2 == 0) {
+                evenCount++;
+            }
+        }
+
+        Vertex[] evenVertices = new Vertex[evenCount];
+        evenCount = 0;
+        for (int i = 0; i < counter; i++) {
+            int vertexValue = Integer.parseInt(vertexList[i].data.toString());
+            if (vertexValue % 2 == 0) {
+                evenVertices[evenCount++] = vertexList[i];
+            }
+        }
+        return evenVertices;
+    }
+
+    //Método para obtener los vértices impares
+    public Vertex[] getOddVertices() throws GraphException {
+        if (isEmpty()) {
+            throw new GraphException("Adjacency List Graph is empty");
+        }
+
+        int oddCount = 0;
+        for (int i = 0; i < counter; i++) {
+            int vertexValue = Integer.parseInt(vertexList[i].data.toString());
+            if (vertexValue % 2 != 0) {
+                oddCount++;
+            }
+        }
+
+        Vertex[] oddVertices = new Vertex[oddCount];
+        oddCount = 0;
+        for (int i = 0; i < counter; i++) {
+            int vertexValue = Integer.parseInt(vertexList[i].data.toString());
+            if (vertexValue % 2 != 0) {
+                oddVertices[oddCount++] = vertexList[i];
+            }
+        }
+        return oddVertices;
+    }
+
+    //Método para conectar vértices pares e impares
+    public void connectEvenOddVertices() throws GraphException, ListException {
+        Vertex[] evenVertices = getEvenVertices();
+        Vertex[] oddVertices = getOddVertices();
+
+        //Conectar vértices pares entre sí
+        for (int i = 0; i < evenVertices.length; i++) {
+            for (int j = i + 1; j < evenVertices.length; j++) {
+                int weight = 100 + util.Utility.getRandom(101);
+                addEdgeWeight(evenVertices[i].data, evenVertices[j].data, weight);
+            }
+        }
+
+        //Conectar vértices impares entre sí
+        for (int i = 0; i < oddVertices.length; i++) {
+            for (int j = i + 1; j < oddVertices.length; j++) {
+                int weight = 100 + util.Utility.getRandom(101);
+                addEdgeWeight(oddVertices[i].data, oddVertices[j].data, weight);
+            }
+        }
+    }
+
+
     @Override
     public String toString() {
         String result = "Adjacency List Graph Content";
@@ -230,6 +303,19 @@ public class AdjacencyListGraph implements Graph {
             }
         }
         return result;
+    }
+
+    // Método para obtener todos los vértices del grafo
+    public Vertex[] getVertices() throws GraphException {
+        if (isEmpty()) {
+            throw new GraphException("Adjacency List Graph is empty");
+        }
+
+        Vertex[] vertices = new Vertex[counter];
+        for (int i = 0; i < counter; i++) {
+            vertices[i] = vertexList[i];
+        }
+        return vertices;
     }
 
 }

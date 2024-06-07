@@ -47,6 +47,7 @@ public class HelloController {
 
     @FXML
     public void matrixOperationsOnAction(ActionEvent actionEvent) {
+        loadPage("adjacencyMatrixOperations.fxml");
     }
 
     @FXML
