@@ -305,7 +305,7 @@ public class AdjacencyListGraph implements Graph {
         return result;
     }
 
-    // Método para obtener todos los vértices del grafo
+    //Método para obtener todos los vértices del grafo
     public Vertex[] getVertices() throws GraphException {
         if (isEmpty()) {
             throw new GraphException("Adjacency List Graph is empty");

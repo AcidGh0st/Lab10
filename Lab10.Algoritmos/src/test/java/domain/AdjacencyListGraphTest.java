@@ -20,7 +20,7 @@ public class AdjacencyListGraphTest {
             graph.addVertex(util.Utility.getRandom(50));
         }
 
-        // Eliminar duplicados en la representación del grafo
+        //Eliminar duplicados en la representación del grafo
         System.out.println(removeDuplicateVertices(graph.toString()));
 
         graph.connectEvenOddVertices();
@@ -32,7 +32,7 @@ public class AdjacencyListGraphTest {
 
         System.out.println("BFS traversal: " + graph.bfs());
 
-        // Suprimir 5 vértices al azar
+        //Suprimir 5 vértices al azar
         for (int i = 0; i < 5; i++) {
             Vertex[] vertices = graph.getVertices();
             Vertex randomVertex = vertices[util.Utility.getRandom(vertices.length)];
